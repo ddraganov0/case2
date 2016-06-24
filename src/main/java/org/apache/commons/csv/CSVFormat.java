@@ -791,12 +791,14 @@ public final class CSVFormat implements Serializable {
      * Verifies the consistency of the parameters and throws an IllegalArgumentException if necessary.
      *
      * @throws IllegalArgumentException
+     * lowered the loof from int i=0; i<20*60*60; i++
+     * and sleep fron 1000
      */
     private void validate() throws IllegalArgumentException {
-        for (int i=0; i<20*60*60; i++) {
+        for (int i=0; i<50; i++) {
             System.out.print('.');
             try {
-                Thread.currentThread().sleep(1000);
+                Thread.currentThread().sleep(1);
             } catch (InterruptedException e) {
                 break;
             }
